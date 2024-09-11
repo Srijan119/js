@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       
+</head>
+<body>
+    <div id="para2">
+        <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eveniet suscipit ipsam necessitatibus aliquam tempore delectus voluptate, cumque, enim architecto aut laborum doloribus consectetur. Placeat, quasi. Labore id blanditiis unde!</p>
+     <br>
+     <input type="text" class="effect-1" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+        </br>
+
+     <p id='keys'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus natus qui reprehenderit quibusdam et excepturi facere tempora quisquam odit sed veritatis earum, aspernatur aliquam voluptatem non porro odio nihil.</p>    
+
+</div>
+</div>
+
+<script>
+    const keyPress=()=>{
+        document.getElementById('keys').innerHTML=`you press${event.key} and its code is ${event.code}`;
+    //on pressing any key it will run
+}
+
+    ///better to use 2nd and 3rd method
+ const keyUp=()=>{
+    document.getElementById('keys').innerHTML="key is up";
+    // when we write something it will run
+ }
+ const keyDown=()=>{
+    document.getElementById('keys').innerHTML="key is down";
+    // when we use backslash to remove something it will run
+ }
+
+
+</script>
+</body>
+</html>

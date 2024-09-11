@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- first way of event handling in js -->
+    <a href="#" class="bu" onclick="alert('I am good')">
+        <span class="button_text_container">
+            simple inline alert()
+        </span>
+    </a>
+    <p></p>
+    <!-- 2nd way of event handling in js -->
+    <a href="#" class="bu" onclick="calling()">
+        <span class="button_text_container">
+            callimg function inline alert()
+        </span>
+    </a>
+    <p></p>
+    <!-- 3rd way -->
+    <a href="#" class="bu" id="thirdway">
+        <span class="button_text_container">
+            3rd way inline alert()
+        </span>
+    </a>
+    <p></p>
+    <!-- 4th way -->
+    <a href="#" class="bu" id="fourthway">
+        <span class="button_text_container">
+            4th way inline alert()
+        </span>
+    </a>
+    <script>
+        //2nd way
+        const calling = () => {
+            alert('i am fine');
+        }
+
+        // 3rd way script of js
+        const thirdway = document.getElementById('thirdway');
+        thirdway.onclick = function () {
+            alert('here comes the 3rd way');
+        }
+        //in case if we have written the console .log or any other functionality also with onclick 
+        //here then it will override the first activity with 2nd that is the last 
+        //activity will happen by neglecting others so this is its drawback
+
+        //4th way
+        const fourthway = document.querySelector('#fourthway');
+        fourthway.addEventListener('click', () => {
+            alert('here is the 4th way')
+        })
+        fourthway.addEventListener('click', () => {
+            console.log('here is the 4th way')
+        })
+
+            // in event listener the above problem in comment is resolved and it doesnt override and execute
+            //all events.
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!-- events in js -->

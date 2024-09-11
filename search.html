@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="forquery">hi welcome all</h2>
+    <h2 class="forquery">hi welcome all</h2>
+
+    <h3 id="forquery">hi welcoming everyone</h3>
+    <p class="myp1">this is para1</p>
+    <p class="myp1">this is para2</p>
+   <h1 id="myh1" style="color:blue">this heading will change</h1> 
+    <button onclick="changeContent()">click me</button>
+   <script>
+    const changeContent = () =>
+    {document.getElementById('myh1').innerHTML="welcome";
+    //or we can as:-------     
+    // const change=document.getElementById('myh1');
+    //change.innerHTML="welcome";
+    console.log(document.getElementsByClassName('myp1'));
+    console.log(document.getElementsByTagName('p'));
+    document.querySelector('.forquery').innerHTML="i changed this now by queryselector";
+    document.querySelector('#forquery').innerHTML="i changed this now by queryselector";
+    // here onluy 1st h2 is changed if we use querySelectorAll then it will change all the aspects with class forquery   
+
+    }
+   </script>
+</body>
+</html>

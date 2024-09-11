@@ -1,0 +1,31 @@
+<!-- to get all info of events we use Eventobject -->
+<!-- Event object is the parent object of all event objects. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" class="bu" id="fourthway">
+        <span class="button_text_container">
+        Event object
+        </span>
+        </a>
+    <script>
+   const fourthway=document.getElementById('fourthway');
+   const checkingEvent=()=>{
+    console.log(event.target);
+    console.log(event.type);
+    console.log(event);
+
+   }
+
+
+   fourthway.addEventListener('click',checkingEvent)
+</script>
+</body>
+</html>

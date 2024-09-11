@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first{
+            box-sizing: content-box;
+            
+           box-sizing: border-box;
+   
+       color:black;
+       background-color: blue;
+       
+       }
+       #second{
+   
+       color:blue;
+       background-color: aqua;
+       }
+   
+   </style>
+</head>
+
+<body>
+   
+     
+    <div id="first">
+        <p>ujgyhbj</p>
+        <div id="second"> 
+            <p>bhbj</p>
+        </div>
+    </div>
+    
+    <script>
+        const parentID=document.getElementById('first');
+        const childID=document.getElementById('second');
+
+        const parentcall=()=>{
+            alert('parent called');
+
+        }
+        const childcall=()=>{
+            alert('child called');
+        //    event.stopPropagation();
+        }
+
+        parentID.addEventListener('click',parentcall);//third arguement is by default false and hence its bubbling phase
+        childID.addEventListener('click',childcall);
+
+
+    </script>
+</body>
+</html>
+
+<!-- event.stop prpogation to stop the propogation of parent after child automatically -->

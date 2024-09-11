@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="para" onmousedown="mousedown()" onmouseup="mouseup()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eos dicta nesciunt possimus est error,
+        facilis similique saepe quos placeat quae voluptatibus ad reprehenderit dolore et ipsum veritatis labore
+        eveniet?</p>
+    <div id="para2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eveniet suscipit ipsam necessitatibus aliquam
+            tempore delectus voluptate, cumque, enim architecto aut laborum doloribus consectetur. Placeat, quasi.
+            Labore id blanditiis unde!</p>
+    </div>
+    <script>
+        function mousedown() {
+            document.getElementById('para').style.color = 'red';
+
+        }
+        function mouseup() {
+            document.getElementById('para').style.color = 'green';
+
+        }
+        mouseE = document.getElementById('para2');
+        mouseE.addEventListener('mouseenter', () => {
+            mouseE.style.backgroundColor = 'grey';
+            console.log('mouse entered bro')
+        });
+        mouseE.addEventListener('mouseleave', () => {
+            mouseE.style.backgroundColor = 'yellow';
+            console.log('mouse left bro');
+        });
+
+
+
+    </script>
+</body>
+
+</html>
